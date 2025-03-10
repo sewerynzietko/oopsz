@@ -3,6 +3,7 @@ public class Main {
         Point p = new Point();
         p.x = 30; p.y = 50;
         System.out.println(p.toSvg());
-        //lab2test
+
     }
 }
+//sasafsgdaegsffsdf
