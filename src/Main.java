@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Point p = new Point();
-        p.setX(0); p.setY(40);
-        System.out.println(p.toSvg());
-
+        Point start = new Point(0,40);
+        Point end = new Point(30,70);
+        Segment line = new Segment(start, end);
+        start.setY(200);
     }
 }
