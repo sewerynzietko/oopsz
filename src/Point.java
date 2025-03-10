@@ -42,4 +42,9 @@ public class Point {
     }
     public Point() {
     }
+
+    public Point(Point toCopy){
+        this.x = toCopy.getX();
+        this.y = toCopy.getY();
+    }
 }
