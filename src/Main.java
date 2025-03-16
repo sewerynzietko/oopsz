@@ -15,4 +15,3 @@ public class Main {
         Polygon poli = new Polygon(points);
     }
 }
-//123
