@@ -13,7 +13,7 @@ public class Main {
         points.add(new Point(0,0));
         points.add(new Point(20,50));
         points.add(new Point(15,80));
-        Polygon poli = new Polygon(points);
+        Polygon poli = new Polygon(points, new Style("#FA8072","0004FF",2));
         try {
             FileWriter fw = new FileWriter("ksztalty.svg");
             fw.write(poli.toSvg());
@@ -22,6 +22,7 @@ public class Main {
         catch(IOException e) {
             System.out.println("Not svg");
         }
+/*
         int ch;
         FileReader fr = null;
         try {
@@ -38,5 +39,6 @@ public class Main {
         catch(IOException e){
             System.out.println("Wystąpił błąd");
         }
+*/
     }
 }
