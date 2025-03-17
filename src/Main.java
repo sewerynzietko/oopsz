@@ -1,5 +1,4 @@
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Main {
@@ -22,6 +21,22 @@ public class Main {
         }
         catch(IOException e) {
             System.out.println("Not svg");
+        }
+        int ch;
+        FileReader fr = null;
+        try {
+            fr = new FileReader("ksztalty.svg");
+        }
+        catch(FileNotFoundException fe) {
+            System.out.println("Pliku nie ma");
+        }
+        try {
+            while ((ch = fr.read()) != -1)
+                System.out.println((char)ch);
+            fr.close();
+        }
+        catch(IOException e){
+            System.out.println("Wystąpił błąd");
         }
     }
 }
