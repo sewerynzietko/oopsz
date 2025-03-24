@@ -1,19 +1,10 @@
 import java.util.ArrayList;
 
-public class Polygon {
-    private Style gangnam;
+public class Polygon extends Shape{
     private ArrayList<Point> points;
 
     public Polygon(ArrayList<Point> points) {
         this.points = points;
-    }
-
-    public Style getGangnam() {
-        return gangnam;
-    }
-
-    public void setGangnam(Style gangnam) {
-        this.gangnam = gangnam;
     }
 
     public Polygon(ArrayList<Point> points, Style gangnam) {
