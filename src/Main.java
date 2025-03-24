@@ -14,9 +14,9 @@ public class Main {
         points.add(new Point(20,50));
         points.add(new Point(15,80));
         SvgScene picture = new SvgScene(500,500);
-        Shape poli = new Polygon(points, new Style("#FF0000","0004FF",2));
-        Shape elli = new Ellipse(new Style("#888888","000000",3),new Point(100,100),100,50);
-        Shape circ = new Circle(new Style("#FF8888","000000",3),new Point(100,100),100);
+        Shape poli = new Polygon(points, new Style("#FF0000","#0004FF",2));
+        Shape elli = new Ellipse(new Style("#888888","#000000",3),new Point(100,100),100,50);
+        Shape circ = new Circle(new Style("#FF8888","#000000",3),new Point(200,100),30);
         picture.getShapes().add(poli);
         picture.getShapes().add(elli);
         picture.getShapes().add(circ);
