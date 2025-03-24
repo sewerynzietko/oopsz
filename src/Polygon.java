@@ -3,12 +3,17 @@ import java.util.ArrayList;
 public class Polygon extends Shape{
     private ArrayList<Point> points;
 
+    public Polygon(Style gangnam) {
+        super(gangnam);
+    }
+
     public Polygon(ArrayList<Point> points) {
+        super();
         this.points = points;
     }
 
     public Polygon(ArrayList<Point> points, Style gangnam) {
-        this.gangnam = gangnam;
+        super(gangnam);
         this.points = points;
     }
 
