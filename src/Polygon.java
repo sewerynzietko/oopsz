@@ -34,8 +34,7 @@ public class Polygon extends Shape{
                 '}';
     }
     public String toSvg() {
-        String beginning = "<svg height=\"220\" width=\"500\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-                "  <polygon points=\"";
+        String beginning =  "<polygon points=\"";
 
         String middle = "";
         for(Point p : points) {
@@ -44,8 +43,7 @@ public class Polygon extends Shape{
 
         String ending = "\" " +
                 gangnam.toSvg() +
-                "\"/>\n" +
-                "</svg>";
+                "\"/>\n";
 
         return beginning + middle + ending;
     }
