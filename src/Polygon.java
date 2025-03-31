@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Locale;
 
-public class Polygon extends Shape{
+public class Polygon implements Shape{
     private ArrayList<Point> points;
 
     public Polygon(Style gangnam) {
-        super(gangnam);
+       // super(gangnam);
     }
 
     public Polygon(ArrayList<Point> points) {
@@ -13,7 +14,7 @@ public class Polygon extends Shape{
     }
 
     public Polygon(ArrayList<Point> points, Style gangnam) {
-        super(gangnam);
+      //  super(gangnam);
         this.points = points;
     }
 
@@ -33,7 +34,8 @@ public class Polygon extends Shape{
                 "points=" + points +
                 '}';
     }
-    public String toSvg() {
+
+    /*public String toSvg() {
         String beginning =  "<polygon points=\"";
 
         String middle = "";
@@ -42,10 +44,22 @@ public class Polygon extends Shape{
         }
 
         String ending = "\" " +
-                gangnam.toSvg() +
+    //            gangnam.toSvg() +
                 "\"/>\n";
 
         return beginning + middle + ending;
+    }*/
+
+    public String toSvg(String param){
+        String pointsString = "";
+        for(Point point : points) {
+            pointsString += point.getX() + "," + point.getY() + " ";
+        }
+        return String.format(Locale.ENGLISH, "<polygon points=\"%s\" %s/>", pointsString, param);
+    }
+
+    public String toSvg() {
+        return toSvg("");
     }
 }
 

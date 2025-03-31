@@ -1,6 +1,7 @@
-public abstract class Shape {
-    protected Style gangnam;
+public interface Shape {
 
+/*
+    protected Style gangnam;
     public Shape() {
     }
 
@@ -14,5 +15,9 @@ public abstract class Shape {
     public void setGangnam(Style gangnam) {
         this.gangnam = gangnam;
     }
-    public abstract String toSvg();
+*/
+
+String toSvg();
+
+String toSvg(String param);
 }
