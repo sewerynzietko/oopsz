@@ -28,7 +28,6 @@ public class Polygon implements Shape{
         return new Polygon(points, style);
     }
 
-    @Override
     public String toString() {
         return "Polygon{" +
                 "points=" + points +

@@ -17,7 +17,7 @@ public class Ellipse implements Shape{
         this.ry = ry;
     }
 
-    @Override
+ /*   @Override
     public String toSvg() {
         return
                 "  <ellipse rx=\"" + rx +
@@ -27,10 +27,20 @@ public class Ellipse implements Shape{
                         "\"\n" +
 //                "" + gangnam.toSvg() +
                         "\" />\n";
+    }*/
+
+
+    public String toSvg() {
+        return toSvg("");
     }
 
-    @Override
     public String toSvg(String param) {
-        return null;
+        return
+                "  <ellipse rx=\"" + rx +
+                        "\" ry=\"" + ry +
+                        "\" cx=\"" + center.getX() +
+                        "\" cy=\"" + center.getY() +
+                        "" + param +
+                        "\" />\n";
     }
 }

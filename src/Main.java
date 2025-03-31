@@ -14,11 +14,15 @@ public class Main {
         points.add(new Point(20,50));
         points.add(new Point(15,80));
         SvgScene picture = new SvgScene(500,500);
-        Shape poli = new SolidFilledPolygon(points, "#FF0000");
-        // elli = new Ellipse(new Style("#888888","#000000",3),new Point(100,100),100,50);
+        Shape poli = new Polygon(points);
+        Shape elli = new Ellipse(new Point(100,100),100,50);
         //Shape circ = new Circle(new Style("#FF8888","#000000",3),new Point(200,100),30);
-        picture.getShapes().add(poli);
-        //picture.getShapes().add(elli);
+        Shape coloredpoli = new SolidFillShapeDecorator(poli, "#0000FF");
+        Shape coloredelli = new SolidFillShapeDecorator(elli, "#FF0000");
+        Shape rotaredelli = new TransformationDecorator.Builder().rotate("20",)
+
+        picture.getShapes().add(coloredpoli);
+        picture.getShapes().add(coloredelli);
         //picture.getShapes().add(circ);
         try {
             FileWriter fw = new FileWriter("ksztalty.svg");
