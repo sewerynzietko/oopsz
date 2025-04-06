@@ -19,10 +19,15 @@ public class Main {
         //Shape circ = new Circle(new Style("#FF8888","#000000",3),new Point(200,100),30);
         Shape coloredpoli = new SolidFillShapeDecorator(poli, "#0000FF");
         Shape coloredelli = new SolidFillShapeDecorator(elli, "#FF0000");
-        Shape rotaredelli = new TransformationDecorator.Builder().rotate("20",)
-
-        picture.getShapes().add(coloredpoli);
-        picture.getShapes().add(coloredelli);
+        Shape rotatedelli = new TransformationDecorator.Builder()
+                .rotate(20, new Point(50,30)).
+                translate(new Point(-10, 0)).
+                scale(new Point(2, 1)).build(elli);
+        Shape widthcoloredpoli = new StrokeShapeDecorator(coloredpoli, 2,"#FFFFFF");
+        Shape widthcoloredelli = new StrokeShapeDecorator(coloredelli, 2,"#00F000");
+        picture.getShapes().add(widthcoloredelli);
+        picture.getShapes().add(widthcoloredpoli);
+        //picture.getShapes().add(rotatedelli);
         //picture.getShapes().add(circ);
         try {
             FileWriter fw = new FileWriter("ksztalty.svg");

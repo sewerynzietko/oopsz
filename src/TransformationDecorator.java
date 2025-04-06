@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class TransformationDecorator extends ShapeDecorator{
     private String transformation;
 
@@ -17,17 +19,17 @@ public class TransformationDecorator extends ShapeDecorator{
         private String transformation = "";
 
         public Builder translate(Point p) {
-            transformation += String.format(" translate(%f %f) ",p.getX(),p.getY());
+            transformation += String.format(Locale.US, " translate(%f %f) ",p.getX(),p.getY());
             return this;
         }
 
-        public Builder rotate(float angle, Point center){
-            transformation += String.format(" rotate(%f %f %f ) ",angle,center.getX(),center.getY());
+        public Builder rotate(double angle, Point center){
+            transformation += String.format(Locale.US," rotate(%f, %f, %f ) ",angle,center.getX(),center.getY());
             return this;
         }
 
         public Builder scale(Point p){
-            transformation += String.format(" scale(%f %f) ",p.getX(),p.getY());
+            transformation += String.format(Locale.US," scale(%f %f) ",p.getX(),p.getY());
             return this;
         }
 

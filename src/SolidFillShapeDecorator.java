@@ -6,7 +6,13 @@ public class SolidFillShapeDecorator extends ShapeDecorator{
         this.color = color;
     }
 
-    public String toSvg(Shape decoratedShape, String param) {
-        return decoratedShape.toSvg("style=\"fill:" + color + "\"");
+    public String toSvg(String param) {
+        String fill = String.format("fill=\"%s\" ", color);
+        return decoratedShape.toSvg(fill + param);
     }
+
+    public String toSvg() {
+        return toSvg("");
+    }
+
 }
